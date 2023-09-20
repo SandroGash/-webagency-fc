@@ -150,10 +150,12 @@ header {
 
 .container2 {
     display: grid;
+    justify-items: center;
+    align-items: center;
     grid-template-columns: 3fr 1fr 3fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     color: gray;
-    font-size: 12px;
+    font-size: 16px;
     margin-left: 80px;
     margin-right: 5px;
     width: 100%;
@@ -161,21 +163,21 @@ header {
 }
 
 .heading1 {
-    justify-self: center;
-    align-self: center;
+    align-self: self-end;
     grid-column-start: 1;
     grid-column-end: span 3;
     grid-row-start: 1;
     grid-row-end: 1;
-    font-size: 30px;
+    font-size: 35px;
     color: black;
     
 }
 
 .lines {
-    justify-self: center;
-    align-self: center;
+    align-self: self-start;
     color: rgb(229, 226, 226);
+    font-size: 20px;
+    margin-top: 25px;
     grid-column-start: 1;
     grid-column-end: span 3;
     grid-row-start: 2;
@@ -183,16 +185,18 @@ header {
 }
 
 .screen {
+    align-self: center;
     grid-column: 1 / 1;
-    grid-row: 4 / 7;
+    grid-row-start: 5;
+    grid-row-end: span 3;
 }
 
 .round {
-    justify-self: center;
-    align-self: center;
+    align-self: self-start;
+    margin-top: 39px;
     height: 0px;
     width: 0px;
-    border: 5px solid rgba(50, 156, 163, 0.838);
+    border: 8px solid rgba(50, 156, 163, 0.838);
     border-radius: 50px;
     grid-column-start: 1;
     grid-column-end: span 3;
@@ -200,48 +204,101 @@ header {
     grid-row-end: 2;
 }
 
-.container2 .slogan {
-    justify-self: center;
+.slogan {
+    text-align: center;
     align-self: center;
-    color: black;
     grid-column: 1 / 3;
+    grid-column-end: span 3;
     grid-row: 3 / 3;
 }
 
 
 .fa-solid {
     color: rgba(50, 156, 163, 0.838);
+    font-weight: bold;
+    font-size: 25px;
 }
 
 .fa-chart-line {
     grid-column: 2 / 2;
-    grid-row: 4 / 4;
+    grid-row: 5 / 5;
 }
 
 .fa-cubes {
     grid-column: 2 / 2;
-    grid-row: 5 / 5;
+    grid-row: 6 / 6;
 }
 
 .fa-chart-pie {
     grid-column: 2 / 2;
-    grid-row: 6 / 6;
+    grid-row: 7 / 7;
+}
+
+.tasks {
+    font-weight: bold;
+    color: black;
 }
 
 .ux {
     grid-column: 3 / 3;
-    grid-row: 4 / 4;
+    grid-row: 5 / 5;
 }
 
 .ui {
+    justify-self: self-start;
     grid-column: 3 / 3;
-    grid-row: 5 / 5;
+    grid-row: 6 / 6;
 }
 
 .seo {
     grid-column: 3 / 3;
-    grid-row: 6 / 6;
+    grid-row: 7 / 7;
 }
+
+.cl {
+    grid-column: 2 / 2;
+    grid-row: 5 / 5;
+    
+}
+
+.main {
+
+    width:50px;
+    height:50px;
+    border:1px solid #CCC;
+    position:absolute;
+    top:0; bottom:0; left:0;right:0;
+    margin:auto;
+    border-radius:50%; 
+}
+
+.circle {
+    width:10px;
+    height:10px;
+    background:rgba(50, 156, 163, 0.838);
+    border-radius:50%;
+    position:absolute;
+    top:0; bottom:0; left:0;right:0;
+    overflow:hidden;
+    margin:auto;
+    animation: circle 6s linear infinite;
+}
+
+@keyframes circle{
+0%{
+    transform:rotate(0deg)
+                translate(-25px)
+                rotate(0deg);
+    
+    }
+100%{
+    transform:rotate(360deg)
+                translate(-25px)
+                rotate(-360deg);
+    }
+}
+
+
 
 
 
